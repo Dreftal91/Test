@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <title>Addition & Subtraction Arithmetic Test</title>
+</head>
+<body>
+<h1>Addition & Subtraction Arithmetic Test</h1>
+    <div class="name">
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text">
+        <button id="submitname">Submit Name</button>
+    </div>
+    <div class="Questionnaires">
+        <div class="row">
+            <div class="AddingQuestionnaire">
+    <legend><h2>Adding</h2></legend>
+        <div class="Questions">
+            <h3>What is 2+2?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question1">
+                        <button id="q1three" class="incorrect">Three</button>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1two" name="question1" class="incorrect">
+                        <label for="q1two">2</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q1four" name="question1" class="correct">
+                        <label for="q1four">4</label>
+                    </div>
+                </fieldset>
+            </div>
+            <h3>What is 13+2?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question2">
+                        <input type="radio" id="q2five" name="question2" class="incorrect">
+                        <label for="q2five">5</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q2two" name="question2" class="incorrect">
+                        <label for="q2two">2</label>
+                    </div>
+                    <div>
+                        <button id="q2fifteen" class="correct">Fifteen</button>
+                    </div>
+                </fieldset>
+            </div>
+            <h3>What is 7+93?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question3">
+                        <input type="radio" id="q3eightytwo" name="question3" class="incorrect">
+                        <label for="q3eightytwo">82</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3hundredtwentytwo" name="question3" class="incorrect">
+                        <label for="q3hundredtwentytwo">122</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="q3hundred" name="question3" class="correct">
+                        <label for="q3hundred">100</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+            <div class="SubtractingQuestionnaire">
+        <legend><h2>Subtracting</h2></legend>
+        <div class="Questions">
+            <h3>What is 2-2?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question1subtract">
+                        <input type="radio" id="sq1three" name="squestion1" class="incorrect">
+                        <label for="sq1three">3</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq1two" name="squestion1" class="incorrect">
+                        <label for="sq1two">2</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq1zero" name="squestion1" class="correct">
+                        <label for="sq1zero">0</label>
+                    </div>
+                </fieldset>
+            </div>
+            <h3>What is 13-2?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question2subtract">
+                        <input type="radio" id="sq2five" name="squestion2" class="incorrect">
+                        <label for="sq2five">5</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq2two" name="squestion2" class="incorrect">
+                        <label for="sq2two">2</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq2eleven" name="squestion2" class="correct">
+                        <label for="sq2eleven">11</label>
+                    </div>
+                </fieldset>
+            </div>
+            <h3>What is 7-93?</h3>
+            <div  class="row">
+                <fieldset>
+                    <div class="Question3Subtract">
+                        <input type="radio" id="sq3negeightysix" name="squestion3" class="correct">
+                        <label for="sq3negeightysix">82</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq3hundredtwentytwo" name="squestion3" class="incorrect">
+                        <label for="sq3hundredtwentytwo">122</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="sq3hundred" name="squestion3" class="incorrect">
+                        <label for="sq3hundred">100</label>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+        </div>
+    </div>
+<h2 id="finalscore" class="hiddesn"></h2>
+<button id="seescore">See Score</button>
+<script>
+    const name = document.querySelector('.name');
+    const correct = document.querySelector('.correct');
+    const incorrect = document.querySelector('.incorrect');
+    const seescorebutton = document.getElementById('seescore');
+
+    let finalscore = document.getElementById('finalscore')
+    let score = 0
+
+    seescorebutton.addEventListener('click', function (e) {
+        finalscore.innerHTML = `<h2>Final Score ${score}</h2>`
+    })
+
+    correct.addEventListener('click', function (e) {
+        score++;
+    })
+    incorrect.addEventListener('click', function (e) {
+        score--;
+    })
+
+</script>
+</body>
+</html>

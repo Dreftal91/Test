@@ -1,0 +1,50 @@
+body {
+    background: antiquewhite;
+}
+h1 {
+    color: antiquewhite;
+    background: darkolivegreen;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+}
+h3 {
+    text-align: center;
+}
+.name {
+    text-align: center;
+}
+.row {
+    gap: 60px;
+    display: flex;
+}
+.Questionnaires {
+    margin: 20px;
+}
+.SubtractingQuestionnaire {
+    border-radius: 15px;
+    border: solid #723030 5px;
+    background: #e59e9e;
+    width: 50%;
+    float: left;
+}
+.AddingQuestionnaire {
+    border-radius: 15px;
+    border: solid #305172 5px;
+    background: #9ee3e5;
+    width: 50%;
+    float: left;
+}
+fieldset {
+    margin: auto;
+    border: solid #475947 5px;
+    width: 250px;
+    background: #abb4ab;
+}
+.hidden {
+    display: none;
+}
+.unhidden {
+    display: inline-block;
+}
